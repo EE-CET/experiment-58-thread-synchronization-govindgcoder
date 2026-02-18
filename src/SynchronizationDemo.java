@@ -47,7 +47,7 @@ public class SynchronizationDemo {
         MyThread1 m1 = new MyThread1(tb);
         MyThread2 m2 = new MyThread2(tb);
         // TODO: Start both threads
-        m1.run();
-        m2.run();
+        m1.start();
+        m2.start();
     }
 }
