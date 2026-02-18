@@ -4,7 +4,7 @@ class Table {
     // Loop from 1 to 5 (as per sample) or 10
     // Print n * i + " "
     // Handle InterruptedException (try-catch Thread.sleep(400))
-    public void printTable(int n) {
+    public synchronized void printTable(int n) {
         for (int i = 1; i <= 5; i++) {
             System.out.print(n * i + " ");
         }
