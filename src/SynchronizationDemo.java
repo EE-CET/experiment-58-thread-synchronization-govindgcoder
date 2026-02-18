@@ -5,8 +5,7 @@ class Table {
     // Handle InterruptedException (try-catch Thread.sleep(400))
     public void printTable(int n){
         for(int i=1; i<=5; i++){
-            System.out.print(n*i);
-            if(i!=5) System.out.print(" ");
+            System.out.print(n*i+" ");
         }
     }
 }
