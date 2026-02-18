@@ -5,11 +5,17 @@ class Table {
     // Print n * i + " "
     // Handle InterruptedException (try-catch Thread.sleep(400))
     public synchronized void printTable(int n) {
+        try {
         for (int i = 1; i <= 5; i++) {
             System.out.print(n * i + " ");
         }
         System.out.print("\n");
+        Thread.sleep(400);
+        } catch (InterruptedException e){
+            
+        }
     }
+    
 }
 
 class MyThread1 extends Thread {
@@ -41,7 +47,7 @@ class MyThread2 extends Thread {
 public class SynchronizationDemo {
 
     public static void main(String[] args) {
-        // Create Table object
+        // Create Table objecti
         Table tb = new Table();
         // Create MyThread1 and MyThread2 objects passing the table object
         MyThread1 m1 = new MyThread1(tb);
