@@ -5,15 +5,14 @@ class Table {
     // Print n * i + " "
     // Handle InterruptedException (try-catch Thread.sleep(400))
     public synchronized void printTable(int n) {
-        try {
         for (int i = 1; i <= 5; i++) {
             System.out.print(n * i + " ");
+            try {
+                Thread.sleep(400);
+            } catch (InterruptedException e){}
         }
-        System.out.print("\n");
-        Thread.sleep(400);
-        } catch (InterruptedException e){
-            
-        }
+        System.out.println();
+        
     }
     
 }
