@@ -11,7 +11,8 @@ class Table {
                 Thread.sleep(400);
             } catch (InterruptedException e){}
         }
-        System.out.println();
+        System.out.print("\n");
+        System.out.flush();
         
     }
     
@@ -54,5 +55,11 @@ public class SynchronizationDemo {
         // TODO: Start both threads
         m1.start();
         m2.start();
+        try {
+            m1.join();
+            m2.join();
+        } catch (InterruptedException e) {
+            System.out.println(e);
+        }
     }
 }
